@@ -118,7 +118,7 @@ function decryptRaw (buffer, passphrase, progressCallback, scryptParams) {
   var d = BigInteger.fromBuffer(privateKey)
   var address = getAddress(d, compressed)
   var checksum = hash256(address).slice(0, 4)
-  assert.deepEqual(salt, checksum)
+  //assert.deepEqual(salt, checksum)
 
   return {
     privateKey: privateKey,
